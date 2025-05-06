@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-05-06
 
 ### Added
+
 - Initial release
 - Country data with ISO 3166-1 alpha-2/alpha-3 codes, calling codes, emoji flags, and regions
 - TypeScript typings and interfaces
