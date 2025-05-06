@@ -1,7 +1,7 @@
-[![npm version](https://img.shields.io/npm/v/country-codes-list.svg)](https://www.npmjs.com/package/country-codes-list)
-[![CI](https://github.com/YOUR_GITHUB_USERNAME/country-codes-list/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/country-codes-list/actions)
+[![npm version](https://img.shields.io/npm/v/country-codes-data.svg)](https://www.npmjs.com/package/country-codes-data)
+[![CI](https://github.com/venkatajanapareddy/country-codes-data/actions/workflows/ci.yml/badge.svg)](https://github.com/venkatajanapareddy/country-codes-data/actions)
 
-# country-codes-list
+# country-codes-data
 
 A modern, well-typed, developer-friendly TypeScript library providing a comprehensive dataset of countries and their codes (ISO 3166-1 alpha-2/alpha-3, calling codes, emoji flags, regions). Reliable, up-to-date, and MIT licensed.
 
@@ -16,13 +16,13 @@ A modern, well-typed, developer-friendly TypeScript library providing a comprehe
 ## Installation
 
 ```sh
-npm install country-codes-list
+npm install country-codes-data
 ```
 
 ## Usage
 
 ```ts
-import { countries, countriesMap, getCountryByCode, getCallingCode, getEmojiFlag, isValidCountryCode, searchCountriesByName } from 'country-codes-list';
+import { countries, countriesMap, getCountryByCode, getCallingCode, getEmojiFlag, isValidCountryCode, searchCountriesByName } from 'country-codes-data';
 
 console.log(countries[0]);
 // { name: 'Afghanistan', codeA2: 'AF', codeA3: 'AFG', callingCode: '+93', region: 'Asia', emoji: '🇦🇫' }
@@ -48,7 +48,7 @@ console.log(searchCountriesByName('land'));
 You can use the CLI to quickly look up country info by code:
 
 ```sh
-npx country-codes-list US
+npx country-codes-data US
 # {
 #   "name": "United States",
 #   "codeA2": "US",

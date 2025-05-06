@@ -3,7 +3,7 @@ import { getCountryByCode } from './index';
 
 const code = process.argv[2];
 if (!code) {
-  console.error('Usage: npx country-codes-list [CODE]');
+  console.error('Usage: npx country-codes-data [CODE]');
   process.exit(1);
 }
 const country = getCountryByCode(code);

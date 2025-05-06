@@ -1,13 +1,45 @@
 {
-  "name": "country-codes-list",
+  "name": "country-codes-data",
   "version": "1.0.0",
   "description": "A modern, well-typed, developer-friendly TypeScript library providing a comprehensive dataset of countries and their codes (ISO 3166-1 alpha-2/alpha-3, calling codes, emoji flags, regions). Reliable, up-to-date, and MIT licensed.",
-  "author": "country-codes-list Contributors",
+  "author": {
+    "name": "Venkata Janapareddy",
+    "url": "https://github.com/venkatajanapareddy"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/venkatajanapareddy/country-codes-data#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkatajanapareddy/country-codes-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/venkatajanapareddy/country-codes-data/issues"
+  },
+  "keywords": [
+    "country",
+    "countries",
+    "codes",
+    "iso",
+    "alpha-2",
+    "alpha-3",
+    "typescript",
+    "calling-codes",
+    "emoji",
+    "flags",
+    "i18n",
+    "international"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -42,6 +74,6 @@
     "world-countries": "^5.1.0"
   },
   "bin": {
-    "country-codes-list": "./dist/cli.js"
+    "country-codes-data": "./dist/cli.js"
   }
 }
