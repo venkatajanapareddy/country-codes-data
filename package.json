@@ -59,7 +59,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "generate:data": "tsx src/data/generate-countries.ts",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/node": "^20.14.11",
@@ -69,6 +70,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-unused-imports": "^4.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.3.3",
     "tsup": "^8.2.2",
     "typescript": "^5.5.3",
@@ -78,5 +81,9 @@
   "bin": {
     "country-codes-data": "./dist/cli.js",
     "ccd": "./dist/cli.js"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md,yml}": "prettier --write",
+    "*.ts": "eslint --fix"
   }
 }
