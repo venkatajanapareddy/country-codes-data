@@ -1,6 +1,6 @@
 {
   "name": "country-codes-data",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A modern, well-typed, developer-friendly TypeScript library providing a comprehensive dataset of countries and their codes (ISO 3166-1 alpha-2/alpha-3, calling codes, emoji flags, regions). Reliable, up-to-date, and MIT licensed.",
   "author": {
     "name": "Venkata Janapareddy",
