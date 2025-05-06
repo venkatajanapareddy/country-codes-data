@@ -1,5 +1,5 @@
 import countriesData from './data/countries.json';
-import { Country, CountryCodeA2, CountryCodeA3, CountryCallingCode } from './types';
+import { Country, CountryCodeA2, CountryCallingCode } from './types';
 
 // Re-export core types
 export * from './types';
