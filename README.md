@@ -6,6 +6,7 @@
 A modern, well-typed, developer-friendly TypeScript library providing a comprehensive dataset of countries and their codes (ISO 3166-1 alpha-2/alpha-3, calling codes, emoji flags, regions). Reliable, up-to-date, and MIT licensed.
 
 ## Features
+
 - Accurate, up-to-date country data (ISO 3166-1, calling codes, emoji flags, regions)
 - TypeScript-first: strong typings, strict mode
 - Utility functions for easy lookups and validation
@@ -22,7 +23,15 @@ npm install country-codes-data
 ## Usage
 
 ```ts
-import { countries, countriesMap, getCountryByCode, getCallingCode, getEmojiFlag, isValidCountryCode, searchCountriesByName } from 'country-codes-data';
+import {
+  countries,
+  countriesMap,
+  getCountryByCode,
+  getCallingCode,
+  getEmojiFlag,
+  isValidCountryCode,
+  searchCountriesByName,
+} from 'country-codes-data';
 
 console.log(countries[0]);
 // { name: 'Afghanistan', codeA2: 'AF', codeA3: 'AFG', callingCode: '+93', region: 'Asia', emoji: '🇦🇫' }
@@ -79,10 +88,12 @@ export interface Country {
 ```
 
 ### Data Exports
+
 - `countries: Readonly<Country[]>` — All country objects
 - `countriesMap: Readonly<Record<CountryCodeA2, Country>>` — Map by alpha-2 code
 
 ### Utility Functions
+
 - `getCountryByCode(code: string): Country | undefined` — Lookup by alpha-2/alpha-3 code
 - `getCallingCode(code: string): CountryCallingCode | undefined` — Get calling code
 - `getEmojiFlag(code: string): string | undefined` — Get emoji flag

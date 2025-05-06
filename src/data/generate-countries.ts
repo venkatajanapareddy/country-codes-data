@@ -43,7 +43,7 @@ function getPrimaryCallingCode(idd: IDD): string {
   return idd.root + idd.suffixes[0];
 }
 
-const countries: CountryJson[] = (worldCountries as unknown as WorldCountry[]).map((c) => ({
+const countries: CountryJson[] = (worldCountries as unknown as WorldCountry[]).map(c => ({
   name: c.name.common,
   codeA2: c.cca2,
   codeA3: c.cca3,
@@ -56,4 +56,4 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const outPath = join(__dirname, 'countries.json');
 writeFileSync(outPath, JSON.stringify(countries, null, 2));
-console.log(`Wrote ${countries.length} countries to ${outPath}`); 
+console.log(`Wrote ${countries.length} countries to ${outPath}`);

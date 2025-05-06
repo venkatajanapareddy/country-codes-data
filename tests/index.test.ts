@@ -10,10 +10,16 @@ import {
 import { describe, it, expect } from 'vitest';
 
 // Sample codes for testing
-const US = { a2: 'US', a3: 'USA', name: 'United States', calling: '+1', emoji: '🇺🇸', region: 'Americas' };
+const US = {
+  a2: 'US',
+  a3: 'USA',
+  name: 'United States',
+  calling: '+1',
+  emoji: '🇺🇸',
+  region: 'Americas',
+};
 const IN = { a2: 'IN', a3: 'IND', name: 'India', calling: '+91', emoji: '🇮🇳', region: 'Asia' };
 const DE = { a2: 'DE', a3: 'DEU', name: 'Germany', calling: '+49', emoji: '🇩🇪', region: 'Europe' };
-
 
 describe('countries dataset', () => {
   it('should be a non-empty array', () => {
@@ -22,7 +28,7 @@ describe('countries dataset', () => {
   });
 
   it('should have all required fields for a sample country', () => {
-    const us = countries.find((c) => c.codeA2 === US.a2);
+    const us = countries.find(c => c.codeA2 === US.a2);
     expect(us).toBeDefined();
     expect(us?.name).toBe(US.name);
     expect(us?.codeA2).toBe(US.a2);
@@ -110,9 +116,9 @@ describe('isValidCountryCode', () => {
 describe('searchCountriesByName', () => {
   it('should find countries by substring (case-insensitive)', () => {
     const results = searchCountriesByName('land');
-    expect(results.some((c) => c.name === 'Finland')).toBe(true);
-    expect(results.some((c) => c.name === 'Iceland')).toBe(true);
-    expect(results.some((c) => c.name === 'Switzerland')).toBe(true);
+    expect(results.some(c => c.name === 'Finland')).toBe(true);
+    expect(results.some(c => c.name === 'Iceland')).toBe(true);
+    expect(results.some(c => c.name === 'Switzerland')).toBe(true);
   });
   it('should return empty array for no match or invalid input', () => {
     expect(searchCountriesByName('zzzzzz')).toEqual([]);
@@ -140,4 +146,4 @@ describe('Data Edge Cases', () => {
     expect(getEmojiFlag('BQ')).toBeUndefined(); // Utility returns undefined for empty string
     expect(isValidCountryCode('BQ')).toBe(true);
   });
-}); 
+});

@@ -13,7 +13,7 @@ export const countries: Readonly<Country[]> = countriesData as Country[];
  * Immutable map of countries keyed by ISO 3166-1 alpha-2 code.
  */
 export const countriesMap: Readonly<Record<CountryCodeA2, Country>> = Object.freeze(
-  Object.fromEntries(countries.map((c) => [c.codeA2, c]))
+  Object.fromEntries(countries.map(c => [c.codeA2, c]))
 );
 
 /**
@@ -24,11 +24,7 @@ export const countriesMap: Readonly<Record<CountryCodeA2, Country>> = Object.fre
 export function getCountryByCode(code: string | null | undefined): Country | undefined {
   if (!code || typeof code !== 'string') return undefined;
   const codeNorm = code.trim().toUpperCase();
-  return (
-    countries.find(
-      (c) => c.codeA2 === codeNorm || c.codeA3 === codeNorm
-    ) || undefined
-  );
+  return countries.find(c => c.codeA2 === codeNorm || c.codeA3 === codeNorm) || undefined;
 }
 
 /**
@@ -68,5 +64,5 @@ export function isValidCountryCode(code: string | null | undefined): boolean {
 export function searchCountriesByName(query: string | null | undefined): Country[] {
   if (!query || typeof query !== 'string') return [];
   const q = query.trim().toLowerCase();
-  return countries.filter((c) => c.name.toLowerCase().includes(q));
-} 
+  return countries.filter(c => c.name.toLowerCase().includes(q));
+}

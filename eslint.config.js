@@ -13,9 +13,9 @@ export default [
     },
     rules: {
       // Add any general rules applicable to all JS/TS files here
-    }
+    },
   },
-  
+
   // TypeScript specific configuration (applied only to .ts files in src/)
   {
     files: ['src/**/*.ts'],
@@ -36,21 +36,16 @@ export default [
       // General rules override/specific to TS
       'no-console': 'warn',
       'no-unused-vars': 'off', // Use TS version
-      '@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
-      
+
       // Import sorting
       'import/order': [
         'error',
         {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            ['parent', 'sibling', 'index'],
-          ],
+          groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
           'newlines-between': 'always',
           alphabetize: { order: 'asc', caseInsensitive: true },
         },
@@ -68,24 +63,24 @@ export default [
   },
   {
     files: ['tsup.config.ts', 'vitest.config.ts', 'eslint.config.js'],
-     languageOptions: {
-       parserOptions: {
-          project: null, // Don't require tsconfig for config files
-       }
-     }
+    languageOptions: {
+      parserOptions: {
+        project: null, // Don't require tsconfig for config files
+      },
+    },
   },
   {
     files: ['tests/**/*.ts'],
     languageOptions: {
-       parser: tsParser,
-       parserOptions: {
-          project: true, // Find tsconfig for tests
-       }
-    }
+      parser: tsParser,
+      parserOptions: {
+        project: true, // Find tsconfig for tests
+      },
+    },
   },
-  
+
   // Ignore patterns
   {
     ignores: ['node_modules/**', 'dist/**', 'coverage/**', '**/*.d.ts'],
   },
-]; 
+];

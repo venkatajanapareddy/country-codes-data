@@ -10,4 +10,4 @@ export default defineConfig({
   shims: false,
   splitting: false,
   onSuccess: 'cp src/data/countries.json dist/countries.json',
-}); 
+});

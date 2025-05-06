@@ -29,4 +29,4 @@ export interface Country {
   region: string;
   /** Unicode flag emoji (e.g., '🇺🇸') */
   emoji: string;
-} 
+}

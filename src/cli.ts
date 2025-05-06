@@ -11,4 +11,4 @@ if (!country) {
   console.error('Country not found for code:', code);
   process.exit(2);
 }
-console.log(JSON.stringify(country, null, 2)); 
+console.log(JSON.stringify(country, null, 2));
