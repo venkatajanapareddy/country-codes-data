@@ -1,0 +1,27 @@
+# Tests
+/tests
+/coverage
+*.spec.ts
+*.test.ts
+vitest.config.ts
+
+# Configuration files
+tsconfig.json
+tsup.config.ts
+.eslintrc.cjs
+.prettierrc.json
+.github/
+
+# Documentation
+/.git
+/.github
+/docs
+
+# Build scripts
+src/data/generate-countries.ts
+
+# Misc
+.DS_Store
+*.log
+.gitignore
+.npmignore 

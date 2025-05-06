@@ -101,13 +101,4 @@ MIT — see [LICENSE](LICENSE)
 
 ## Contributing
 
-Contributions are welcome! To contribute:
-
-1. Fork the repository and create your branch from `main`.
-2. Run `npm install` to install dependencies.
-3. Run `npm run lint` and `npm run format:check` to ensure code style.
-4. Run `npm run test` to verify all tests pass.
-5. Make your changes, add tests if needed, and ensure all checks pass.
-6. Submit a pull request with a clear description of your changes.
-
-Please see the [Code of Conduct](https://opensource.guide/code-of-conduct/) and [Contributing Guide](https://opensource.guide/how-to-contribute/) for more information. 
+Contributions are welcome!
