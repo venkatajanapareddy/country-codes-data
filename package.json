@@ -76,6 +76,7 @@
     "world-countries": "^5.1.0"
   },
   "bin": {
-    "country-codes-data": "./dist/cli.js"
+    "country-codes-data": "./dist/cli.js",
+    "ccd": "./dist/cli.js"
   }
 }

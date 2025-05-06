@@ -57,7 +57,9 @@ console.log(searchCountriesByName('land'));
 You can use the CLI to quickly look up country info by code:
 
 ```sh
+# Use any of these commands:
 npx country-codes-data US
+npx ccd US
 # {
 #   "name": "United States",
 #   "codeA2": "US",
