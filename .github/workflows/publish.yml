@@ -1,8 +1,9 @@
 name: Publish to NPM
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v*'  # Run when any version tag is pushed (v1.0.0, v1.2.3, etc.)
 
 jobs:
   publish:
